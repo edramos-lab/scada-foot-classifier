@@ -4,11 +4,13 @@ services:
   camera_pub:
     build: ./nano_cam_pub
     network_mode: "host"
+    runtime: nvidia
     restart: always
 
   infer_store:
     build: ./xavier_infer_store
     network_mode: "host"
+    runtime: nvidia
     restart: always
 
   dashboard:
